@@ -24,17 +24,17 @@ class RouteServiceProvider extends ServiceProvider
     private $availableInterfaces = [
         'api' => [
             'enabled' => true,
-            'prefix' => '/api',
+            'prefix' => '',
             'request-headers' => [
                 'Accept' => 'application/json',
             ],
             'response-headers' => [
-                'Content-Type' => 'application/json'
+                'Content-Type' => 'application/json',
             ]
         ],
         'web' => [
-            'enabled' => true,
-            'prefix' => '',
+            'enabled' => false,
+            'prefix' => '/web',
             'request-headers' => [],
             'response-headers' => []
         ]

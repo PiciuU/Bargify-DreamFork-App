@@ -25,9 +25,12 @@
         "nesbot/carbon": "^2.69",
         "symfony/routing": "^6.3",
         "symfony/finder": "^6.3",
-        "symfony/filesystem": "^6.3"
+        "symfony/filesystem": "^6.3",
+        "symfony/panther": "^2.1",
+        "minishlink/web-push": "^8.0"
     },
     "require-dev": {
-        "symfony/var-dumper": "^6.3"
+        "symfony/var-dumper": "^6.3",
+        "dbrekelmans/bdi": "^1.1"
     }
 }

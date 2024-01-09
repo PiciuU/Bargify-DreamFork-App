@@ -1,0 +1,31 @@
+/* Colors */
+
+$--color-text: #000000;
+$--color-text-muted-1: #333;
+$--color-text-muted-2: #555;
+$--color-text-muted-3: #999;
+
+$--color-primary: #FAA567;
+$--color-primary-variant: #FD9148;
+$--color-secondary: #479edb;
+
+$--color-overlay: #f5f5f5;
+$--color-background: #ffffff;
+
+$--color-success: #4CAF50;
+$--color-error: #FA6773;
+
+$--color-on-text: $--color-background;
+$--color-on-background: $--color-text;
+
+/* Constants */
+
+$--header-height: 100px;
+
+/* Breakpoints */
+
+$--breakpoint-small-mobile: 375px;
+$--breakpoint-mobile: 576px;
+$--breakpoint-small-devices: 768px;
+$--breakpoint-medium-devices: 992px;
+$--breakpoint-large-devices: 1200px;

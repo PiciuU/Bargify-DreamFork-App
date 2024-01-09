@@ -1,14 +1,26 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
 import App from './App.vue'
 import router from './router'
 
-const app = createApp(App)
+/* Styles */
+import '@/assets/styles/main.scss'
 
-app.use(createPinia())
-app.use(router)
+/* Font Awesome */
+import { fontAwesome } from '@/plugins/font-awesome'
 
-app.mount('#app')
+/* Axios */
+import ApiService from '@/services/api.service';
+ApiService.init();
+
+/* App */
+const app = createApp(App);
+
+app.use(createPinia()).use(router).use(fontAwesome).mount('#app');
+
+/* Inject Service Worker */
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`, { scope: `${import.meta.env.BASE_URL}` });
+    });
+}
