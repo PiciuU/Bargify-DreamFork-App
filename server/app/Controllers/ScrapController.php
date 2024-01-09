@@ -20,11 +20,6 @@ use App\Controllers\NotificationController;
 class ScrapController extends Controller
 {
     /**
-     * Secret key required to authorize access to scraper methods.
-     */
-    const SECRET_KEY = 'secretkey2024bargify';
-
-    /**
      * @var Scraper Instance of the Scraper service.
      */
     private $scraper;
@@ -92,7 +87,7 @@ class ScrapController extends Controller
      */
     public function scrapAll(Request $request)
     {
-        if (!$request->get('secret') || $request->get('secret') !== static::SECRET_KEY) {
+        if (!$request->get('secret') || $request->get('secret') !== env('SCRAPER_SECRET_KEY')) {
             return $this->errorResponse("Unauthorized. Please provide a valid secret key.");
         }
 
@@ -112,7 +107,7 @@ class ScrapController extends Controller
      */
     public function scrapOne(Request $request, $productId)
     {
-        if (!$request->get('secret') || $request->get('secret') !== static::SECRET_KEY) {
+        if (!$request->get('secret') || $request->get('secret') !== env('SCRAPER_SECRET_KEY')) {
             return $this->errorResponse("Unauthorized. Please provide a valid secret key.");
         }
 
