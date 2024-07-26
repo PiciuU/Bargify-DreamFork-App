@@ -1,7 +1,7 @@
 CREATE TABLE `subscribers` (
     `id` int UNSIGNED NOT NULL AUTO_INCREMENT,
     `user_id` int UNSIGNED NOT NULL,
-    `endpoint` varchar(255) NOT NULL,
+    `endpoint` varchar(512) NOT NULL,
     `auth_token` varchar(255) NOT NULL,
     `public_key` varchar(255) NOT NULL,
     `updated_at` TIMESTAMP NULL,
